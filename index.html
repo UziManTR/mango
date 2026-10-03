@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MANGO • Free Beta</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<nav><a class="brand" href="#">🥭 <span>MANGO</span></a><div class="navlinks"><a href="#features">Features</a><a href="#download">Download</a><a href="login.html">Account</a></div></nav>
+<main>
+<section class="hero">
+<div class="hero-copy"><span class="pill">FREE BETA • WINDOWS</span><h1>Grow something<br><em>ridiculous.</em></h1><p>Mango is a tiny progression game about clicking, upgrading and turning an innocent fruit into an unstoppable empire.</p><div class="buttons"><button class="primary" id="download">Get Mango <span>↓</span></button><a class="secondary" href="game.html">Play in Browser <span>↗</span></a></div><div class="meta"><span>● Free to play</span><span>● Beta build</span><span>● Steam planned</span></div></div>
+<div class="fruit-stage"><div class="glow"></div><div class="fruit">🥭</div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><span class="float-tag tag-one">+ MANGO</span><span class="float-tag tag-two">UPGRADE!</span></div>
+</section>
+<section id="features" class="grid">
+<article><div class="num">01</div><h2>Progression</h2><p>Collect mangoes, unlock upgrades and keep pushing your numbers into the silly zone.</p></article>
+<article><div class="num">02</div><h2>Coming online</h2><p>Cloud saves and global leaderboards are planned as the game grows.</p></article>
+<article><div class="num">03</div><h2>Made to evolve</h2><p>Expect new builds, experiments and questionable amounts of mangoes.</p></article>
+</section>
+<section id="download" class="download-card">
+<div><span class="pill">MANGO // BETA</span><h2>Ready to get fruity?</h2><p>The current Windows Beta is free. Read the terms below before downloading.</p></div>
+<div class="checks">
+<label><input type="checkbox" id="eulaCheck"> I agree to the <a href="EULA.md">Mango EULA</a>.</label>
+<label><input type="checkbox" id="privacyCheck"> I acknowledge the <a href="PRIVACY.md">Privacy Policy</a>.</label>
+<button class="primary wide" id="betaDownload" disabled>Download Mango Beta <span>↓</span></button>
+<small>GitHub Release • Windows • Free Beta</small>
+</div>
+</section>
+</main>
+<footer><span>🥭 MANGO © 2026</span><div><a href="PRIVACY.md">Privacy</a><a href="EULA.md">EULA</a><a href="COOKIE_NOTICE.md">Cookies</a></div></footer>
+<div class="cookie" id="cookieBanner"><div><b>🍪 Cookies</b><p>Necessary cookies keep the site working. Optional analytics cookies are off by default.</p></div><div class="cookieButtons"><button id="acceptCookies">Accept optional</button><button id="rejectCookies">Reject optional</button></div></div>
+<script src="config.js"></script>
+<script>
+(()=>{const e=document.querySelector('#eulaCheck'),p=document.querySelector('#privacyCheck'),d=document.querySelector('#betaDownload'),top=document.querySelector('#download');const update=()=>d.disabled=!(e.checked&&p.checked);e.onchange=update;p.onchange=update;d.onclick=()=>{if(!d.disabled)location.href=MANGO_CONFIG.downloadUrl};top.querySelector('.primary')?.addEventListener('click',()=>{});const b=document.querySelector('#cookieBanner'),c=localStorage.getItem('mango-cookie-choice');if(c)b.remove();document.querySelector('#acceptCookies').onclick=()=>{localStorage.setItem('mango-cookie-choice','accepted');b.remove()};document.querySelector('#rejectCookies').onclick=()=>{localStorage.setItem('mango-cookie-choice','rejected');b.remove()};})();
+</script>
+</body>
+</html>
